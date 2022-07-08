@@ -4,21 +4,46 @@
             <span>Kourageous Outdoor Kids</span>
         </div>
         <div>
-            <button mat-button class="example-icon">
-                FAQ
-            </button>
-            <button mat-button class="example-icon">
-                What We Do
-            </button>
-            <button mat-button class="example-icon">
-                Our Story
-            </button>
-            <button mat-button class="example-icon">
-                Be A Volunteer
-            </button>
-            <button mat-button class="example-icon">
-                Contact us
-            </button>
+            <div *ngIf="!menu">
+                <button mat-button class="example-icon">
+                    FAQ
+                </button>
+                <button mat-button class="example-icon">
+                    What We Do
+                </button>
+                <button mat-button class="example-icon">
+                    Our Story
+                </button>
+                <button mat-button class="example-icon">
+                    Be A Volunteer
+                </button>
+                <button mat-button class="example-icon">
+                    Contact us
+                </button>
+            </div>
+            <div *ngIf="menu">
+
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item class="example-icon">
+                        <span>FAQ</span>
+                    </button>
+                    <button mat-menu-item class="example-icon">
+                        <span>What We Do</span>
+                    </button>
+                    <button mat-menu-item class="example-icon">
+                        <span>Our Story</span>
+                    </button>
+                    <button mat-menu-item class="example-icon">
+                        <span>Be A Volunteer</span>
+                    </button>
+                    <button mat-menu-item class="example-icon">
+                        <span>Contact us</span>
+                    </button>
+                </mat-menu>
+            </div>
         </div>
     </div>
 
