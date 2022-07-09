@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,15 +8,14 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
   screenWidth = 0;
   screenHeight = 0;
   menu = false;
-  ngOnInit(): void {
 
+  ngOnInit(): void {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
-    console.log(this.screenHeight, this.screenWidth)
     this.setMenu();
   }
 
@@ -23,7 +23,6 @@ export class HeaderComponent implements OnInit {
   onResize() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
-    console.log(this.screenHeight, this.screenWidth)
     this.setMenu();
   }
 
@@ -36,4 +35,10 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  goToContact() {
+    this.router.navigate(['/', 'contact']);
+  }
+  goHome() {
+    this.router.navigate(['/'])
+  }
 }

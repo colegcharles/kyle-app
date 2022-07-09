@@ -12,13 +12,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
