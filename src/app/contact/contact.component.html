@@ -1,6 +1,57 @@
-<div style="display: flex; justify-content: center;">
-    <mat-card style="width: 440px; height: 440; display: flex; justify-content: center; margin: 10px;">
-        <iframe width="400" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+<div *ngIf="!largeMap" style="display: flex; justify-content: center; margin: 10px;">
+    <mat-card style="max-width: 440px; height: 440; display: flex; justify-content: center; margin: 10px;">
+        <iframe width="540" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=1956%20Ga%20Highway%2019%20S%20%20Dublin+(Kourageous%20Outdoor%20Kids)&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+        </iframe>
+        <script type='text/javascript'
+            src='https://embedmaps.com/google-maps-authorization/script.js?id=22fbc2c5b020849ea7bb32fda01234c55727981e'>
+            </script>
+    </mat-card>
+    <mat-card
+        style="max-width: 440px; display: flex; justify-content: center; flex-direction: column; align-items: center; margin: 10px;">
+        <div style="display: flex; align-items: center;">
+            <mat-icon>phone</mat-icon>(478) 232-7039
+        </div>
+        <div style="display: flex; align-items: center;margin-top: 20px;">
+            <mat-icon>email</mat-icon>koutlaw@kourageousoutdoorkids.org
+        </div>
+        <div style="display:flex; max-width: 440px; margin-top: 20px">
+            <a href="https://www.facebook.com/Kourageous-Outdoor-Kids-Inc-112010221526966/">
+                <img style='cursor: pointer; max-width: 200px;' src="assets/facebook.png">
+            </a>
+
+            <a href="https://www.instagram.com/kourageousoutdoorkids/">
+                <img style='cursor: pointer; margin-left:10px; max-width: 200px;'
+                    href="https://www.facebook.com/Kourageous-Outdoor-Kids-Inc-112010221526966/"
+                    src="assets/instagram.png">
+            </a>
+        </div>
+    </mat-card>
+</div>
+<div *ngIf="largeMap" style="display: flex; justify-content: center; margin: 10px; flex-direction: column;">
+    <mat-card
+        style="max-width: 440px; display: flex; justify-content: center; flex-direction: column; align-items: center; margin: 10px;">
+        <div style="display: flex; align-items: center;">
+            <mat-icon>phone</mat-icon>(478) 232-7039
+        </div>
+        <div style="display: flex; align-items: center;margin-top: 20px;">
+            <mat-icon>email</mat-icon>koutlaw@kourageousoutdoorkids.org
+        </div>
+        <div style="display:flex; max-width: 440px; margin-top: 20px">
+            <a href="https://www.facebook.com/Kourageous-Outdoor-Kids-Inc-112010221526966/">
+                <img style='cursor: pointer; max-width: 150px;' src="assets/facebook.png">
+            </a>
+
+            <a href="https://www.instagram.com/kourageousoutdoorkids/">
+                <img style='cursor: pointer; margin-left:10px; max-width: 150px;'
+                    href="https://www.facebook.com/Kourageous-Outdoor-Kids-Inc-112010221526966/"
+                    src="assets/instagram.png">
+            </a>
+        </div>
+    </mat-card>
+    <mat-card style="max-width: 440px; height: 440; display: flex; justify-content: center; margin: 10px;">
+        <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
             id="gmap_canvas"
             src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=1956%20Ga%20Highway%2019%20S%20%20Dublin+(Kourageous%20Outdoor%20Kids)&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
         </iframe>

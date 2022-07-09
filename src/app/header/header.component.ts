@@ -36,9 +36,21 @@ export class HeaderComponent implements OnInit {
   }
 
   goToContact() {
-    this.router.navigate(['/', 'contact']);
+    this.router.navigate(['/', 'contactus']);
   }
   goHome() {
     this.router.navigate(['/'])
+  }
+  goToFaq() {
+    this.router.navigate(['/', 'faq']);
+  }
+  goToWhatWeDo() {
+    this.router.navigate(['/', 'whatwedo']);
+  }
+  goToVolunteer() {
+    this.router.navigate(['/', 'volunteer']);
+  }
+  goToStory() {
+    this.router.navigate(['/', 'ourstory']);
   }
 }
